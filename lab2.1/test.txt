@@ -1,1 +1,1 @@
-test of commit
+test of commit and we add some text to make sure eveeything is ok
