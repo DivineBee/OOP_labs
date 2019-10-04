@@ -51,7 +51,7 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="com.example.lab3triss.Main" />
       <module name="lab3" />
       <method v="2">
         <option name="Make" enabled="true" />
