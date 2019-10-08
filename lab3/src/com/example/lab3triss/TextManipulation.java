@@ -3,25 +3,27 @@ import java.util.*;
 
 public class TextManipulation {
     public static String str;
-    public static String delim = ".,::?!";
+    public static Character[] delim = {'.', '?', '!'};
 
     TextManipulation(String str) {
         this.str = str.toLowerCase();
     }
 
     public static void countSentences() {
-        int  sentenceCount = 1; //setting counter
-        for (int i = 0; i < str.length() - 1; i++) { //a for loop using our vars str and delim
-            for (int j = 0; j < delim.length(); j++) {
-                if (str.charAt(i) == delim.charAt(j)) {
-                    if (str.charAt(i + 1) == delim.charAt(j)) {
-                        sentenceCount--;
-                    }
+        int sentenceCount = 0;
+        List<Character> characters = Arrays.asList(delim);
+
+        for (int i = 0; i < str.length() - 1; i++) {
+            if(characters.contains(str.charAt(i)))
+                if(!characters.contains((str.charAt(i + 1))))
                     sentenceCount++;
-                }
-            }
         }
-        System.out.println("Number of sentences: "+ sentenceCount);;
+
+        if(!characters.contains(str.charAt(str.length() - 2)))
+            if(characters.contains(str.charAt(str.length() - 1)))
+                sentenceCount++;
+
+        System.out.println("Number of sentences: " + sentenceCount);
     }
 
     public static void countLength(){System.out.println("Longest word is: " + Arrays.stream(str.split(" ")).
