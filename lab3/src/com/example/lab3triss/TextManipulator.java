@@ -1,15 +1,15 @@
 package com.example.lab3triss;
 import java.util.*;
 
-public class TextManipulation {
-    public static String str;
-    public static Character[] delim = {'.', '?', '!'};
+public class TextManipulator {
+    public String str;
+    public Character[] delim = {'.', '?', '!'};
 
-    TextManipulation(String str) {
+    TextManipulator(String str) {
         this.str = str.toLowerCase();
     }
 
-    public static void countSentences() {
+    public void countSentences() {
         int sentenceCount = 0;
         List<Character> characters = Arrays.asList(delim);
 
@@ -26,7 +26,7 @@ public class TextManipulation {
         System.out.println("Number of sentences: " + sentenceCount);
     }
 
-    public static void countLength(){System.out.println("Longest word is: " + Arrays.stream(str.split(" ")).
+    public void countLongestWord(){System.out.println("Longest word is: " + Arrays.stream(str.split(" ")).
             max(Comparator.
                     comparingInt(String::length)).
             orElse(null));}
@@ -35,7 +35,7 @@ public class TextManipulation {
     //example of using :: --> Person::getName in this context is shorthand for (Person p) -> p.getName()
     //shortway of doing it using comparators
 
-    public static void countFrequentWords() {
+    public void PrintMostFrequent5Words() {
         HashMap<String, Integer> frequencyMap = new HashMap<>();
         String[] words = str.split("\\P{L}+");  //split the words
         System.out.println("Number of words: " + words.length);
@@ -46,13 +46,12 @@ public class TextManipulation {
             else
                 frequencyMap.put(words[i], 1);
         }
-
         List<Map.Entry<String, Integer>> results = new ArrayList<>(frequencyMap.entrySet());
         Collections.sort(results, new ValueComparator());
         System.out.println("Top 5 words : " + results.subList(0, 5));
     }
 
-    public static void countLetters() {
+    public void countLetters() {
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
             if (Character.isLetter(str.charAt(i)))
@@ -61,7 +60,7 @@ public class TextManipulation {
         System.out.println("Number of letters: " + count);
     }
 
-    public static void countVowsCons(){
+    public void countVowsCons(){
         int vowsc=0;
         int consc=0;
         str = str.toLowerCase();//this is used in order to reduce comparisions
