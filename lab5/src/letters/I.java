@@ -2,10 +2,10 @@ package letters;
 
 class I extends H {
     protected String i;
-    protected I() {
-    }
-    protected I(String i) {
-        this.i = i;
+
+    protected I(String a, String b,String c,String d,String e,String f,String g,String h,String i, X x) {
+        super(a,b,c,d,e,f,g,h,x);
+        this.i= i;
     }
     public String toString() {
         return "I{" +

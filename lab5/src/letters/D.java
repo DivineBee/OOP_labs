@@ -2,9 +2,11 @@ package letters;
 
 class D extends C {
     protected String d;
-    protected D(){
-    }
-    protected D(String d) {
+
+    //protected X x = new X (" xxxddd ");
+
+    protected D (String a, String b,String c,String d, X x) {
+        super(a,b,c,x);
         this.d = d;
     }
 

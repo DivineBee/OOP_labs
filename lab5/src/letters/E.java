@@ -2,11 +2,12 @@ package letters;
 
 class E extends D {
     protected String e;
-    protected E() {
-    }
-    protected E(String e) {
+
+    protected E(String a, String b,String c,String d,String e, X x) {
+        super(a,b,c,d,x);
         this.e = e;
     }
+
     public String toString() {
         return "E{" +
                 "e='" + e + '\'' +

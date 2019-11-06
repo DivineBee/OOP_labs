@@ -2,9 +2,9 @@ package letters;
 
 class F extends E {
     protected String f;
-    protected F() {
-    }
-    protected F(String f) {
+
+    protected F(String a, String b,String c,String d,String e,String f, X x) {
+        super(a,b,c,d,e,x);
         this.f = f;
     }
     public String toString() {

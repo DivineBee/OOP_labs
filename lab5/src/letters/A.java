@@ -2,8 +2,6 @@ package letters;
 
 class A {
     protected String a;
-    protected A() {
-    }
 
     protected X x = new X (" xxx ");
 

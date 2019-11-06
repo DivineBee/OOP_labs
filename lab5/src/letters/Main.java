@@ -2,17 +2,16 @@ package letters;
 
 public class Main {
     public static void main(String[] args) {
-        A aa = new A();
-        B bb = new B();
-        C cc = new C();
-        D dd = new D();
-        E ee = new E();
-        F ff = new F();
-        G gg = new G();
-        H hh = new H();
-        I ii = new I();
-        J jj = new J();
-        X xx = new X();
+        A aa = new A("aa",new X("xxx"));
+        B bb = new B("ba","bb",new X("xxx"));
+        C cc = new C("ca","cb","cc", new X("xxx"));
+        D dd = new D("da","db","dc","dd", new X("xxx"));
+        E ee = new E("ea","eb","ec","ed","ee", new X("xxx"));
+        F ff = new F("fa","fb","fc","fd","fe","ff", new X("xxx"));
+        G gg = new G("ga","gb","gc","gd","ge","gf","gg", new X("xxx"));
+        H hh = new H("ha","hb","hc","hd","he","hf","hg","hh", new X("xxx"));
+        I ii = new I("ia","ib","ic","id","ie","if","ig","ih","ii", new X("xxx"));
+        J jj = new J("ja","jb","jc","jd","je","jf","jg","jh","ji","jj", new X("xxx"));
 
         System.out.println(aa.toString());
         System.out.println(bb.toString());
@@ -25,29 +24,5 @@ public class Main {
         System.out.println(ii.toString());
         System.out.println(jj.toString());
 
-        A aaa = new A ("aaa",new X("xxx"));
-        System.out.println(aaa.toString());
-
-        aa.a = "22 in the bombed foyer,";
-        bb.b = "For the times, can we stop this rage?";
-        cc.c = "No money, no doctors for patients";
-        dd.d = "And the bullets, they keep you in slavery";
-        ee.e = "Father won't get to see her smile";
-        ff.f = "You saw death, now it's in her eyes";
-        gg.g = "What the hell are we doing to change things?";
-        hh.h = "'Cause I can hear guns in the distance";
-        ii.i = "When a mother cries for her children?";
-        jj.j = "Gettin' rich, tell me who gets paid";
-
-        aa.display();
-        bb.display();
-        cc.display();
-        dd.display();
-        ee.display();
-        ff.display();
-        gg.display();
-        hh.display();
-        ii.display();
-        jj.display();
     }
 }

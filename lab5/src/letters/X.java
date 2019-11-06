@@ -13,6 +13,7 @@ class X {
     public X(String x) {
         this.x = x;
     }
+
     public X(){
     }
 }

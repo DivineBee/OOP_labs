@@ -2,11 +2,10 @@ package letters;
 
 class C extends B {
     protected String c;
-    protected C() {
-    }
 
-    public C(String c) {
-        this.c = c;
+    protected C (String a, String b, String c, X x) {
+        super (a,b,x);
+        this.c= c;
     }
 
     public String toString() {

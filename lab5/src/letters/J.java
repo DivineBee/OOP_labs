@@ -2,10 +2,10 @@ package letters;
 
 class J extends I {
     protected String j;
-    protected J() {
-    }
-    protected J(String j) {
-        this.j = j;
+
+    protected J(String a, String b,String c,String d,String e,String f,String g,String h,String i,String j, X x) {
+        super(a,b,c,d,e,f,g,h,i,x);
+        this.j= j;
     }
     public String toString() {
         return "J{" +
@@ -19,6 +19,7 @@ class J extends I {
                 ", c='" + c + '\'' +
                 ", b='" + b + '\'' +
                 ", a='" + a + '\'' +
+               // ", x=" + x +
                 '}';
     }
     void display() {

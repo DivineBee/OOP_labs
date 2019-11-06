@@ -2,11 +2,12 @@ package letters;
 
 class H extends G {
     protected String h;
-    protected H() {
-    }
 
-    protected H(String h) {
-        this.h = h;
+    private X x = new X (" xxxhhh ");
+
+    protected H(String a, String b,String c,String d,String e,String f,String g,String h, X x) {
+        super(a,b,c,d,e,f,g,x);
+        this.h= h;
     }
     public String toString() {
         return "H{" +
